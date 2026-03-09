@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenAI RAG Assistant</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="chat-container">
+        <header>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div style="width: 32px;"></div> <!-- Spacer -->
+                <div style="text-align: center;">
+                    <h1>GenAI Assistant</h1>
+                    <p>Retrieval-Augmented Generation</p>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <button class="auth-btn" id="signup-btn" onclick="startSignup()">Signup</button>
+                    <button class="auth-btn" id="signin-btn" onclick="startSignin()">Signin</button>
+                    <button id="clear-btn" onclick="clearChat()" title="Clear Chat"
+                        style="background: transparent; width: auto; height: auto; padding: 5px;">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="#6b7280" stroke-width="2" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="3 6 5 6 21 6"></polyline>
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                            </path>
+                            <line x1="10" y1="11" x2="10" y2="17"></line>
+                            <line x1="14" y1="11" x2="14" y2="17"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div id="chat-box" class="chat-box">
+            <!-- Messages will appear here -->
+            <div class="bot-message">
+                <span class="avatar">AI</span>
+                <div class="bubble">Hi there! 😊 I am your AI assistant. How can I help you explore your documents
+                    today?</div>
+            </div>
+        </div>
+
+        <div id="chips-container" class="chips-container">
+            <button class="chip" onclick="useChip('How do I reset my password?')">Reset Password</button>
+            <button class="chip" onclick="useChip('How to create an account?')">Create Account</button>
+            <button class="chip" onclick="useChip('Tell me about 2FA security')">Security/2FA</button>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Ask a question about the docs..." />
+            <button id="send-btn" onclick="sendMessage()">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 2L11 13" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

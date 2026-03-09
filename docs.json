@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Reset Password",
+    "content": "Users can reset their password from Settings > Security."
+  },
+  {
+    "title": "Account Creation",
+    "content": "Users can create an account by clicking Sign Up and verifying their email."
+  },
+  {
+    "title": "Delete Account",
+    "content": "Users can delete their account from Profile Settings > Delete Account."
+  },
+  {
+    "title": "Change Email",
+    "content": "Users can change their email address from Account Settings."
+  },
+  {
+    "title": "Two Factor Authentication",
+    "content": "Users can enable two factor authentication from Security Settings."
+  }
+]
